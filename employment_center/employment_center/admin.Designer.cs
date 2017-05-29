@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.actualbox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -39,7 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.addvacantionbtn = new System.Windows.Forms.Button();
+            this.editvacantionbtn = new System.Windows.Forms.Button();
             this.createcal = new System.Windows.Forms.DateTimePicker();
             this.aboutbox = new System.Windows.Forms.TextBox();
             this.locationbox = new System.Windows.Forms.TextBox();
@@ -71,7 +72,6 @@
             this.middlenamebox = new System.Windows.Forms.TextBox();
             this.surnamebox = new System.Windows.Forms.TextBox();
             this.namebox = new System.Windows.Forms.TextBox();
-            this.actualbox = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -99,7 +99,7 @@
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.addvacantionbtn);
+            this.tabPage1.Controls.Add(this.editvacantionbtn);
             this.tabPage1.Controls.Add(this.createcal);
             this.tabPage1.Controls.Add(this.aboutbox);
             this.tabPage1.Controls.Add(this.locationbox);
@@ -117,6 +117,14 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Добавление вакансии";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // actualbox
+            // 
+            this.actualbox.Location = new System.Drawing.Point(196, 346);
+            this.actualbox.Name = "actualbox";
+            this.actualbox.Size = new System.Drawing.Size(174, 20);
+            this.actualbox.TabIndex = 20;
+            this.actualbox.Text = "Актуально";
             // 
             // label9
             // 
@@ -199,15 +207,15 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Сфера деятельности";
             // 
-            // addvacantionbtn
+            // editvacantionbtn
             // 
-            this.addvacantionbtn.Location = new System.Drawing.Point(196, 365);
-            this.addvacantionbtn.Name = "addvacantionbtn";
-            this.addvacantionbtn.Size = new System.Drawing.Size(140, 23);
-            this.addvacantionbtn.TabIndex = 10;
-            this.addvacantionbtn.Text = "Добавить вакансию";
-            this.addvacantionbtn.UseVisualStyleBackColor = true;
-            this.addvacantionbtn.Click += new System.EventHandler(this.addvacantionbtn_Click);
+            this.editvacantionbtn.Location = new System.Drawing.Point(196, 365);
+            this.editvacantionbtn.Name = "editvacantionbtn";
+            this.editvacantionbtn.Size = new System.Drawing.Size(140, 23);
+            this.editvacantionbtn.TabIndex = 10;
+            this.editvacantionbtn.Text = "Добавить вакансию";
+            this.editvacantionbtn.UseVisualStyleBackColor = true;
+            this.editvacantionbtn.Click += new System.EventHandler(this.addvacantionbtn_Click);
             // 
             // createcal
             // 
@@ -472,14 +480,6 @@
             this.namebox.Size = new System.Drawing.Size(164, 20);
             this.namebox.TabIndex = 0;
             // 
-            // actualbox
-            // 
-            this.actualbox.Location = new System.Drawing.Point(196, 346);
-            this.actualbox.Name = "actualbox";
-            this.actualbox.Size = new System.Drawing.Size(174, 20);
-            this.actualbox.TabIndex = 20;
-            this.actualbox.Text = "Актуально";
-            // 
             // admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -524,7 +524,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button addvacantionbtn;
+        private System.Windows.Forms.Button editvacantionbtn;
         private System.Windows.Forms.DateTimePicker createcal;
         private System.Windows.Forms.Button addclient;
         private System.Windows.Forms.DateTimePicker createclientdata;

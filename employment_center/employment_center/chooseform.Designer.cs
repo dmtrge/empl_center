@@ -1,6 +1,6 @@
 ﻿namespace employment_center
 {
-    partial class searchform
+    partial class chooseform
     {
         /// <summary>
         /// Required designer variable.
@@ -62,8 +62,6 @@
             this.vacantionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fornotesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.specialtybox = new System.Windows.Forms.TextBox();
-            this.searchbtn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -78,12 +76,11 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(0, 31);
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1273, 606);
+            this.tabControl1.Size = new System.Drawing.Size(1022, 634);
             this.tabControl1.TabIndex = 0;
-            this.tabControl1.Click += new System.EventHandler(this.tabControl1_Click);
             // 
             // tabPage1
             // 
@@ -91,9 +88,9 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1265, 580);
+            this.tabPage1.Size = new System.Drawing.Size(1014, 608);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Поиск по вакансиям";
+            this.tabPage1.Text = "Выбрать вакансию";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
@@ -102,9 +99,9 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1265, 580);
+            this.tabPage2.Size = new System.Drawing.Size(731, 499);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Поиск по клиентам";
+            this.tabPage2.Text = "Выбрать клиента";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
@@ -128,8 +125,9 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1259, 574);
+            this.dataGridView1.Size = new System.Drawing.Size(1008, 602);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
             // databaseDataSet
             // 
@@ -238,7 +236,7 @@
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1259, 574);
+            this.dataGridView2.Size = new System.Drawing.Size(725, 493);
             this.dataGridView2.TabIndex = 0;
             // 
             // clientsBindingSource
@@ -317,34 +315,15 @@
             this.dateDataGridViewTextBoxColumn1.HeaderText = "date";
             this.dateDataGridViewTextBoxColumn1.Name = "dateDataGridViewTextBoxColumn1";
             // 
-            // specialtybox
-            // 
-            this.specialtybox.Location = new System.Drawing.Point(12, 5);
-            this.specialtybox.Name = "specialtybox";
-            this.specialtybox.Size = new System.Drawing.Size(160, 20);
-            this.specialtybox.TabIndex = 1;
-            // 
-            // searchbtn
-            // 
-            this.searchbtn.Location = new System.Drawing.Point(178, 5);
-            this.searchbtn.Name = "searchbtn";
-            this.searchbtn.Size = new System.Drawing.Size(75, 23);
-            this.searchbtn.TabIndex = 2;
-            this.searchbtn.Text = "button1";
-            this.searchbtn.UseVisualStyleBackColor = true;
-            this.searchbtn.Click += new System.EventHandler(this.searchbtn_Click);
-            // 
-            // searchform
+            // chooseform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1285, 637);
-            this.Controls.Add(this.searchbtn);
-            this.Controls.Add(this.specialtybox);
+            this.ClientSize = new System.Drawing.Size(1025, 634);
             this.Controls.Add(this.tabControl1);
-            this.Name = "searchform";
-            this.Text = "searchform";
-            this.Load += new System.EventHandler(this.searchform_Load);
+            this.Name = "chooseform";
+            this.Text = "chooseform";
+            this.Load += new System.EventHandler(this.chooseform_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -354,7 +333,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -393,7 +371,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn vacantionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fornotesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.TextBox specialtybox;
-        private System.Windows.Forms.Button searchbtn;
     }
 }

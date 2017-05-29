@@ -7,38 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace employment_center
 {
-    public partial class searchform : Form
+    public partial class chooseform : Form
     {
-        public searchform()
+        public chooseform()
         {
             InitializeComponent();
         }
 
-        private void searchform_Load(object sender, EventArgs e)
+        private void chooseform_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "databaseDataSet.clients". При необходимости она может быть перемещена или удалена.
             this.clientsTableAdapter.Fill(this.databaseDataSet.clients);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "databaseDataSet.vacantions". При необходимости она может быть перемещена или удалена.
             this.vacantionsTableAdapter.Fill(this.databaseDataSet.vacantions);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "databaseDataSet.vacantions". При необходимости она может быть перемещена или удалена.
-            this.vacantionsTableAdapter.Fill(this.databaseDataSet.vacantions);
 
         }
 
-       
-
-        private void searchbtn_Click(object sender, EventArgs e)
+        private void dataGridView1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void tabControl1_Click(object sender, EventArgs e)
-        {
-
+            editform editform = new editform();
+            editform.Show();
         }
     }
 }
