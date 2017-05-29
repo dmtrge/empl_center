@@ -88,5 +88,29 @@ namespace employment_center
             aboutbox aboutbox = new aboutbox();
             aboutbox.Show();
         }
+
+        private void панельАдминистратораToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            preadmin preadmin = new preadmin();
+            preadmin.Show();
+
+        }
+
+        private void открытьДокументToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Настоятельно рекомендуется использовать браузер google chrome для дальнейшей работы!");
+            System.Diagnostics.Process.Start("https://google.com");
+        }
+
+        private void справкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://google.com");
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox1 AboutBox1 = new AboutBox1();
+            AboutBox1.Show();
+        }
     }
 }

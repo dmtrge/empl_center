@@ -30,9 +30,20 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.addvacantionbtn = new System.Windows.Forms.Button();
+            this.createcal = new System.Windows.Forms.DateTimePicker();
             this.aboutbox = new System.Windows.Forms.TextBox();
             this.locationbox = new System.Windows.Forms.TextBox();
-            this.shedulebox = new System.Windows.Forms.TextBox();
+            this.schedulebox = new System.Windows.Forms.TextBox();
             this.expbox = new System.Windows.Forms.TextBox();
             this.salarybox = new System.Windows.Forms.TextBox();
             this.requirementsbox = new System.Windows.Forms.TextBox();
@@ -40,6 +51,17 @@
             this.specialtybox = new System.Windows.Forms.TextBox();
             this.field_of_activitybox = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.addclient = new System.Windows.Forms.Button();
+            this.createclientdata = new System.Windows.Forms.DateTimePicker();
             this.fornotesbox = new System.Windows.Forms.TextBox();
             this.vacantionbox = new System.Windows.Forms.TextBox();
             this.educationbox = new System.Windows.Forms.TextBox();
@@ -49,28 +71,7 @@
             this.middlenamebox = new System.Windows.Forms.TextBox();
             this.surnamebox = new System.Windows.Forms.TextBox();
             this.namebox = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.addvacantionbtn = new System.Windows.Forms.Button();
-            this.addclient = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.actualbox = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -88,6 +89,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.actualbox);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.label7);
@@ -98,10 +100,10 @@
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.addvacantionbtn);
-            this.tabPage1.Controls.Add(this.dateTimePicker1);
+            this.tabPage1.Controls.Add(this.createcal);
             this.tabPage1.Controls.Add(this.aboutbox);
             this.tabPage1.Controls.Add(this.locationbox);
-            this.tabPage1.Controls.Add(this.shedulebox);
+            this.tabPage1.Controls.Add(this.schedulebox);
             this.tabPage1.Controls.Add(this.expbox);
             this.tabPage1.Controls.Add(this.salarybox);
             this.tabPage1.Controls.Add(this.requirementsbox);
@@ -115,6 +117,104 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(8, 221);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(108, 13);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Описание вакансии";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(8, 195);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(100, 13);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Местонахождение";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(8, 169);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(85, 13);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "График работы";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(8, 143);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(74, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Опыт работы";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(8, 117);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Зарплата";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(8, 91);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Требования";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(8, 65);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(131, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Предприятие(Компания)";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(8, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Специальность";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Сфера деятельности";
+            // 
+            // addvacantionbtn
+            // 
+            this.addvacantionbtn.Location = new System.Drawing.Point(196, 365);
+            this.addvacantionbtn.Name = "addvacantionbtn";
+            this.addvacantionbtn.Size = new System.Drawing.Size(140, 23);
+            this.addvacantionbtn.TabIndex = 10;
+            this.addvacantionbtn.Text = "Добавить вакансию";
+            this.addvacantionbtn.UseVisualStyleBackColor = true;
+            this.addvacantionbtn.Click += new System.EventHandler(this.addvacantionbtn_Click);
+            // 
+            // createcal
+            // 
+            this.createcal.Location = new System.Drawing.Point(196, 320);
+            this.createcal.Name = "createcal";
+            this.createcal.Size = new System.Drawing.Size(200, 20);
+            this.createcal.TabIndex = 9;
             // 
             // aboutbox
             // 
@@ -131,12 +231,12 @@
             this.locationbox.Size = new System.Drawing.Size(164, 20);
             this.locationbox.TabIndex = 7;
             // 
-            // shedulebox
+            // schedulebox
             // 
-            this.shedulebox.Location = new System.Drawing.Point(196, 162);
-            this.shedulebox.Name = "shedulebox";
-            this.shedulebox.Size = new System.Drawing.Size(164, 20);
-            this.shedulebox.TabIndex = 6;
+            this.schedulebox.Location = new System.Drawing.Point(196, 162);
+            this.schedulebox.Name = "schedulebox";
+            this.schedulebox.Size = new System.Drawing.Size(164, 20);
+            this.schedulebox.TabIndex = 6;
             // 
             // expbox
             // 
@@ -192,7 +292,7 @@
             this.tabPage2.Controls.Add(this.label16);
             this.tabPage2.Controls.Add(this.label17);
             this.tabPage2.Controls.Add(this.addclient);
-            this.tabPage2.Controls.Add(this.dateTimePicker2);
+            this.tabPage2.Controls.Add(this.createclientdata);
             this.tabPage2.Controls.Add(this.fornotesbox);
             this.tabPage2.Controls.Add(this.vacantionbox);
             this.tabPage2.Controls.Add(this.educationbox);
@@ -210,182 +310,14 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // fornotesbox
+            // label18
             // 
-            this.fornotesbox.Location = new System.Drawing.Point(196, 214);
-            this.fornotesbox.Multiline = true;
-            this.fornotesbox.Name = "fornotesbox";
-            this.fornotesbox.Size = new System.Drawing.Size(239, 103);
-            this.fornotesbox.TabIndex = 8;
-            // 
-            // vacantionbox
-            // 
-            this.vacantionbox.Location = new System.Drawing.Point(196, 188);
-            this.vacantionbox.Name = "vacantionbox";
-            this.vacantionbox.Size = new System.Drawing.Size(164, 20);
-            this.vacantionbox.TabIndex = 7;
-            // 
-            // educationbox
-            // 
-            this.educationbox.Location = new System.Drawing.Point(196, 162);
-            this.educationbox.Name = "educationbox";
-            this.educationbox.Size = new System.Drawing.Size(164, 20);
-            this.educationbox.TabIndex = 6;
-            // 
-            // addressbox
-            // 
-            this.addressbox.Location = new System.Drawing.Point(196, 136);
-            this.addressbox.Name = "addressbox";
-            this.addressbox.Size = new System.Drawing.Size(164, 20);
-            this.addressbox.TabIndex = 5;
-            // 
-            // IDpas
-            // 
-            this.IDpas.Location = new System.Drawing.Point(196, 110);
-            this.IDpas.Name = "IDpas";
-            this.IDpas.Size = new System.Drawing.Size(164, 20);
-            this.IDpas.TabIndex = 4;
-            // 
-            // phone
-            // 
-            this.phone.Location = new System.Drawing.Point(196, 84);
-            this.phone.Name = "phone";
-            this.phone.Size = new System.Drawing.Size(164, 20);
-            this.phone.TabIndex = 3;
-            // 
-            // middlenamebox
-            // 
-            this.middlenamebox.Location = new System.Drawing.Point(196, 58);
-            this.middlenamebox.Name = "middlenamebox";
-            this.middlenamebox.Size = new System.Drawing.Size(164, 20);
-            this.middlenamebox.TabIndex = 2;
-            // 
-            // surnamebox
-            // 
-            this.surnamebox.Location = new System.Drawing.Point(196, 32);
-            this.surnamebox.Name = "surnamebox";
-            this.surnamebox.Size = new System.Drawing.Size(164, 20);
-            this.surnamebox.TabIndex = 1;
-            // 
-            // namebox
-            // 
-            this.namebox.Location = new System.Drawing.Point(196, 6);
-            this.namebox.Name = "namebox";
-            this.namebox.Size = new System.Drawing.Size(164, 20);
-            this.namebox.TabIndex = 0;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(196, 320);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 9;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(196, 323);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 9;
-            // 
-            // addvacantionbtn
-            // 
-            this.addvacantionbtn.Location = new System.Drawing.Point(196, 365);
-            this.addvacantionbtn.Name = "addvacantionbtn";
-            this.addvacantionbtn.Size = new System.Drawing.Size(140, 23);
-            this.addvacantionbtn.TabIndex = 10;
-            this.addvacantionbtn.Text = "Добавить вакансию";
-            this.addvacantionbtn.UseVisualStyleBackColor = true;
-            // 
-            // addclient
-            // 
-            this.addclient.Location = new System.Drawing.Point(196, 367);
-            this.addclient.Name = "addclient";
-            this.addclient.Size = new System.Drawing.Size(141, 23);
-            this.addclient.TabIndex = 10;
-            this.addclient.Text = "Добавить клиента";
-            this.addclient.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Сфера деятельности";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 13);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Специальность";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 65);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 13);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Предприятие(Компания)";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 91);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 13);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Требования";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 117);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 13);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Зарплата";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(8, 143);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 13);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Опыт работы";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 169);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 13);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "График работы";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 195);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 13);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Местонахождение";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(8, 221);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(108, 13);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "Описание вакансии";
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(3, 217);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(74, 13);
+            this.label18.TabIndex = 28;
+            this.label18.Text = "Для заметок";
             // 
             // label10
             // 
@@ -459,14 +391,94 @@
             this.label17.TabIndex = 20;
             this.label17.Text = "Имя";
             // 
-            // label18
+            // addclient
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(3, 217);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(74, 13);
-            this.label18.TabIndex = 28;
-            this.label18.Text = "Для заметок";
+            this.addclient.Location = new System.Drawing.Point(196, 367);
+            this.addclient.Name = "addclient";
+            this.addclient.Size = new System.Drawing.Size(141, 23);
+            this.addclient.TabIndex = 10;
+            this.addclient.Text = "Добавить клиента";
+            this.addclient.UseVisualStyleBackColor = true;
+            this.addclient.Click += new System.EventHandler(this.addclient_Click);
+            // 
+            // createclientdata
+            // 
+            this.createclientdata.Location = new System.Drawing.Point(196, 323);
+            this.createclientdata.Name = "createclientdata";
+            this.createclientdata.Size = new System.Drawing.Size(200, 20);
+            this.createclientdata.TabIndex = 9;
+            // 
+            // fornotesbox
+            // 
+            this.fornotesbox.Location = new System.Drawing.Point(196, 214);
+            this.fornotesbox.Multiline = true;
+            this.fornotesbox.Name = "fornotesbox";
+            this.fornotesbox.Size = new System.Drawing.Size(239, 103);
+            this.fornotesbox.TabIndex = 8;
+            // 
+            // vacantionbox
+            // 
+            this.vacantionbox.Location = new System.Drawing.Point(196, 188);
+            this.vacantionbox.Name = "vacantionbox";
+            this.vacantionbox.Size = new System.Drawing.Size(164, 20);
+            this.vacantionbox.TabIndex = 7;
+            // 
+            // educationbox
+            // 
+            this.educationbox.Location = new System.Drawing.Point(196, 162);
+            this.educationbox.Name = "educationbox";
+            this.educationbox.Size = new System.Drawing.Size(164, 20);
+            this.educationbox.TabIndex = 6;
+            // 
+            // addressbox
+            // 
+            this.addressbox.Location = new System.Drawing.Point(196, 136);
+            this.addressbox.Name = "addressbox";
+            this.addressbox.Size = new System.Drawing.Size(164, 20);
+            this.addressbox.TabIndex = 5;
+            // 
+            // IDpas
+            // 
+            this.IDpas.Location = new System.Drawing.Point(196, 110);
+            this.IDpas.Name = "IDpas";
+            this.IDpas.Size = new System.Drawing.Size(164, 20);
+            this.IDpas.TabIndex = 4;
+            // 
+            // phone
+            // 
+            this.phone.Location = new System.Drawing.Point(196, 84);
+            this.phone.Name = "phone";
+            this.phone.Size = new System.Drawing.Size(164, 20);
+            this.phone.TabIndex = 3;
+            // 
+            // middlenamebox
+            // 
+            this.middlenamebox.Location = new System.Drawing.Point(196, 58);
+            this.middlenamebox.Name = "middlenamebox";
+            this.middlenamebox.Size = new System.Drawing.Size(164, 20);
+            this.middlenamebox.TabIndex = 2;
+            // 
+            // surnamebox
+            // 
+            this.surnamebox.Location = new System.Drawing.Point(196, 32);
+            this.surnamebox.Name = "surnamebox";
+            this.surnamebox.Size = new System.Drawing.Size(164, 20);
+            this.surnamebox.TabIndex = 1;
+            // 
+            // namebox
+            // 
+            this.namebox.Location = new System.Drawing.Point(196, 6);
+            this.namebox.Name = "namebox";
+            this.namebox.Size = new System.Drawing.Size(164, 20);
+            this.namebox.TabIndex = 0;
+            // 
+            // actualbox
+            // 
+            this.actualbox.Location = new System.Drawing.Point(196, 346);
+            this.actualbox.Name = "actualbox";
+            this.actualbox.Size = new System.Drawing.Size(174, 20);
+            this.actualbox.TabIndex = 20;
+            this.actualbox.Text = "Актуально";
             // 
             // admin
             // 
@@ -491,7 +503,7 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TextBox aboutbox;
         private System.Windows.Forms.TextBox locationbox;
-        private System.Windows.Forms.TextBox shedulebox;
+        private System.Windows.Forms.TextBox schedulebox;
         private System.Windows.Forms.TextBox expbox;
         private System.Windows.Forms.TextBox salarybox;
         private System.Windows.Forms.TextBox requirementsbox;
@@ -513,9 +525,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button addvacantionbtn;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker createcal;
         private System.Windows.Forms.Button addclient;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker createclientdata;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -530,5 +542,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox actualbox;
     }
 }
