@@ -112,5 +112,18 @@ namespace employment_center
             AboutBox1 AboutBox1 = new AboutBox1();
             AboutBox1.Show();
         }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.vacantionsTableAdapter.FillBy(this.databaseDataSet.vacantions);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }

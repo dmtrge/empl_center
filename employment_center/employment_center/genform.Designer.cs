@@ -80,6 +80,21 @@
             this.dateDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fieldofactivityDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.specialtyDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companyDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.requirementsDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.salaryDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.scheduleDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.locationDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aboutDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actualDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.найтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.vacantionsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
@@ -89,6 +104,8 @@
             this.tabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // vacantionsBindingSource
@@ -122,6 +139,8 @@
             // 
             // файлToolStripMenuItem
             // 
+            this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.найтиToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
             this.файлToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.файлToolStripMenuItem.Text = "Файл";
@@ -156,7 +175,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1115, 498);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Список клиентов";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // dataGridView2
@@ -254,6 +273,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(12, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -367,7 +387,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1115, 498);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Список вакансий";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // idDataGridViewTextBoxColumn2
@@ -457,6 +477,120 @@
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.dataGridView3);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1115, 498);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn3,
+            this.fieldofactivityDataGridViewTextBoxColumn2,
+            this.specialtyDataGridViewTextBoxColumn2,
+            this.companyDataGridViewTextBoxColumn2,
+            this.requirementsDataGridViewTextBoxColumn2,
+            this.salaryDataGridViewTextBoxColumn2,
+            this.expDataGridViewTextBoxColumn2,
+            this.scheduleDataGridViewTextBoxColumn2,
+            this.locationDataGridViewTextBoxColumn2,
+            this.aboutDataGridViewTextBoxColumn2,
+            this.actualDataGridViewTextBoxColumn2,
+            this.dateDataGridViewTextBoxColumn3});
+            this.dataGridView3.DataSource = this.vacantionsBindingSource;
+            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView3.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(1109, 492);
+            this.dataGridView3.TabIndex = 0;
+            // 
+            // idDataGridViewTextBoxColumn3
+            // 
+            this.idDataGridViewTextBoxColumn3.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn3.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn3.Name = "idDataGridViewTextBoxColumn3";
+            this.idDataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // fieldofactivityDataGridViewTextBoxColumn2
+            // 
+            this.fieldofactivityDataGridViewTextBoxColumn2.DataPropertyName = "field_of_activity";
+            this.fieldofactivityDataGridViewTextBoxColumn2.HeaderText = "field_of_activity";
+            this.fieldofactivityDataGridViewTextBoxColumn2.Name = "fieldofactivityDataGridViewTextBoxColumn2";
+            // 
+            // specialtyDataGridViewTextBoxColumn2
+            // 
+            this.specialtyDataGridViewTextBoxColumn2.DataPropertyName = "specialty";
+            this.specialtyDataGridViewTextBoxColumn2.HeaderText = "specialty";
+            this.specialtyDataGridViewTextBoxColumn2.Name = "specialtyDataGridViewTextBoxColumn2";
+            // 
+            // companyDataGridViewTextBoxColumn2
+            // 
+            this.companyDataGridViewTextBoxColumn2.DataPropertyName = "company";
+            this.companyDataGridViewTextBoxColumn2.HeaderText = "company";
+            this.companyDataGridViewTextBoxColumn2.Name = "companyDataGridViewTextBoxColumn2";
+            // 
+            // requirementsDataGridViewTextBoxColumn2
+            // 
+            this.requirementsDataGridViewTextBoxColumn2.DataPropertyName = "requirements";
+            this.requirementsDataGridViewTextBoxColumn2.HeaderText = "requirements";
+            this.requirementsDataGridViewTextBoxColumn2.Name = "requirementsDataGridViewTextBoxColumn2";
+            // 
+            // salaryDataGridViewTextBoxColumn2
+            // 
+            this.salaryDataGridViewTextBoxColumn2.DataPropertyName = "salary";
+            this.salaryDataGridViewTextBoxColumn2.HeaderText = "salary";
+            this.salaryDataGridViewTextBoxColumn2.Name = "salaryDataGridViewTextBoxColumn2";
+            // 
+            // expDataGridViewTextBoxColumn2
+            // 
+            this.expDataGridViewTextBoxColumn2.DataPropertyName = "exp";
+            this.expDataGridViewTextBoxColumn2.HeaderText = "exp";
+            this.expDataGridViewTextBoxColumn2.Name = "expDataGridViewTextBoxColumn2";
+            // 
+            // scheduleDataGridViewTextBoxColumn2
+            // 
+            this.scheduleDataGridViewTextBoxColumn2.DataPropertyName = "schedule";
+            this.scheduleDataGridViewTextBoxColumn2.HeaderText = "schedule";
+            this.scheduleDataGridViewTextBoxColumn2.Name = "scheduleDataGridViewTextBoxColumn2";
+            // 
+            // locationDataGridViewTextBoxColumn2
+            // 
+            this.locationDataGridViewTextBoxColumn2.DataPropertyName = "location";
+            this.locationDataGridViewTextBoxColumn2.HeaderText = "location";
+            this.locationDataGridViewTextBoxColumn2.Name = "locationDataGridViewTextBoxColumn2";
+            // 
+            // aboutDataGridViewTextBoxColumn2
+            // 
+            this.aboutDataGridViewTextBoxColumn2.DataPropertyName = "about";
+            this.aboutDataGridViewTextBoxColumn2.HeaderText = "about";
+            this.aboutDataGridViewTextBoxColumn2.Name = "aboutDataGridViewTextBoxColumn2";
+            // 
+            // actualDataGridViewTextBoxColumn2
+            // 
+            this.actualDataGridViewTextBoxColumn2.DataPropertyName = "actual";
+            this.actualDataGridViewTextBoxColumn2.HeaderText = "actual";
+            this.actualDataGridViewTextBoxColumn2.Name = "actualDataGridViewTextBoxColumn2";
+            // 
+            // dateDataGridViewTextBoxColumn3
+            // 
+            this.dateDataGridViewTextBoxColumn3.DataPropertyName = "date";
+            this.dateDataGridViewTextBoxColumn3.HeaderText = "date";
+            this.dateDataGridViewTextBoxColumn3.Name = "dateDataGridViewTextBoxColumn3";
+            // 
+            // найтиToolStripMenuItem
+            // 
+            this.найтиToolStripMenuItem.Name = "найтиToolStripMenuItem";
+            this.найтиToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.найтиToolStripMenuItem.Text = "Найти";
+            // 
             // genform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -477,6 +611,8 @@
             this.tabControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage1.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -534,6 +670,21 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.ToolStripMenuItem справкаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fieldofactivityDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn specialtyDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn companyDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn requirementsDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn salaryDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn scheduleDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn locationDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aboutDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn actualDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn3;
+        private System.Windows.Forms.ToolStripMenuItem найтиToolStripMenuItem;
     }
 }
 
