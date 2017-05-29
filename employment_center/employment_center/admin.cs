@@ -33,12 +33,12 @@ namespace employment_center
 
                 sqlCommand.Parameters.Add(new SqlParameter("@field_of_activity", field_of_activitybox.Text));
                 sqlCommand.Parameters.Add(new SqlParameter("@specialty",specialtybox.Text));
-                sqlCommand.Parameters.Add(new SqlParameter("@company", companytbox.Text));
-                sqlCommand.Parameters.Add(new SqlParameter("@requirements", requirementstbox.Text));
-                sqlCommand.Parameters.Add(new SqlParameter("@salary", salarytbox.Text));
-                sqlCommand.Parameters.Add(new SqlParameter("@exp", exptbox.Text));
+                sqlCommand.Parameters.Add(new SqlParameter("@company", companybox.Text));
+                sqlCommand.Parameters.Add(new SqlParameter("@requirements", requirementsbox.Text));
+                sqlCommand.Parameters.Add(new SqlParameter("@salary", salarybox.Text));
+                sqlCommand.Parameters.Add(new SqlParameter("@exp", expbox.Text));
                 sqlCommand.Parameters.Add(new SqlParameter("@schedule", schedulebox.Text));
-                sqlCommand.Parameters.Add(new SqlParameter("@location", locationtbox.Text));
+                sqlCommand.Parameters.Add(new SqlParameter("@location",locationbox.Text));
                 sqlCommand.Parameters.Add(new SqlParameter("@about", aboutbox.Text));
                 sqlCommand.Parameters.Add(new SqlParameter("@actual", actualbox.Text));
                 sqlCommand.Parameters.Add(new SqlParameter("@date", createcal.Value));
@@ -69,8 +69,6 @@ namespace employment_center
                 var sqlCommand = new SqlCommand("INSERT INTO clients (name, surname, middlename, phone, IDpas, address, education, vacantion, fornotes, date) VALUES(@name, @surname, @middlename, @phone, @IDpas, @address, @education, @vacantion, @fornotes, @date)", myConnection);
 
 
-
-
                 sqlCommand.Parameters.Add(new SqlParameter("@name",namebox.Text));
                 sqlCommand.Parameters.Add(new SqlParameter("@surname", surnamebox.Text));
                 sqlCommand.Parameters.Add(new SqlParameter("@middlename", middlenamebox.Text));
@@ -80,7 +78,7 @@ namespace employment_center
                 sqlCommand.Parameters.Add(new SqlParameter("@education", educationbox.Text));
                 sqlCommand.Parameters.Add(new SqlParameter("@vacantion", vacantionbox.Text));
                 sqlCommand.Parameters.Add(new SqlParameter("@fornotes",fornotesbox.Text));
-                sqlCommand.Parameters.Add(new SqlParameter("@date"),createclientdata.Value));
+                sqlCommand.Parameters.Add(new SqlParameter("@date",createclientdata.Value));
                 MessageBox.Show("Запись создана успешнно");
                 this.Close();
                 try

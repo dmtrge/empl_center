@@ -95,6 +95,12 @@
     <Compile Include="genform.Designer.cs">
       <DependentUpon>genform.cs</DependentUpon>
     </Compile>
+    <Compile Include="headband.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="headband.Designer.cs">
+      <DependentUpon>headband.cs</DependentUpon>
+    </Compile>
     <Compile Include="preadmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="genform.resx">
       <DependentUpon>genform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="headband.resx">
+      <DependentUpon>headband.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="preadmin.resx">
       <DependentUpon>preadmin.cs</DependentUpon>
