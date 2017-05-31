@@ -512,6 +512,7 @@
             this.delclidbtn.Name = "delclidbtn";
             this.delclidbtn.Size = new System.Drawing.Size(75, 23);
             this.delclidbtn.TabIndex = 3;
+            this.delclidbtn.Text = "Удалить";
             this.delclidbtn.UseVisualStyleBackColor = true;
             this.delclidbtn.Click += new System.EventHandler(this.delclidbtn_Click);
             // 
@@ -535,7 +536,7 @@
             this.delbtn.Name = "delbtn";
             this.delbtn.Size = new System.Drawing.Size(75, 23);
             this.delbtn.TabIndex = 0;
-            this.delbtn.Text = "button1";
+            this.delbtn.Text = "Удалить";
             this.delbtn.UseVisualStyleBackColor = true;
             this.delbtn.Click += new System.EventHandler(this.delbtn_Click);
             // 

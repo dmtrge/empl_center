@@ -83,11 +83,23 @@ namespace employment_center
             aboutcl.Show();
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, EventArgs e)
         {
-            this.activitiesTableAdapter.Fill(this.databaseDataSet.activities);
-            this.clientsTableAdapter.Fill(this.databaseDataSet.clients);
-            this.vacantionsTableAdapter.Fill(this.databaseDataSet.vacantions);
+            id = Convert.ToString(dataGridView1.CurrentRow.Cells[0].Value);
+            field_of_activity = Convert.ToString(dataGridView1.CurrentRow.Cells[1].Value);
+            speciality = Convert.ToString(dataGridView1.CurrentRow.Cells[2].Value);
+            company = Convert.ToString(dataGridView1.CurrentRow.Cells[3].Value);
+            requirements = Convert.ToString(dataGridView1.CurrentRow.Cells[4].Value);
+            salary = Convert.ToString(dataGridView1.CurrentRow.Cells[5].Value);
+            exp = Convert.ToString(dataGridView1.CurrentRow.Cells[6].Value);
+            schedule = Convert.ToString(dataGridView1.CurrentRow.Cells[7].Value);
+            location = Convert.ToString(dataGridView1.CurrentRow.Cells[8].Value);
+            about = Convert.ToString(dataGridView1.CurrentRow.Cells[9].Value);
+            actual = Convert.ToString(dataGridView1.CurrentRow.Cells[10].Value);
+           date = Convert.ToString(dataGridView1.CurrentRow.Cells[11].Value);
+            
+            aboutbox aboutbox = new aboutbox();
+            aboutbox.Show();
         }
 
         private void панельАдминистратораToolStripMenuItem_Click(object sender, EventArgs e)
@@ -142,32 +154,7 @@ namespace employment_center
 
         }
 
-        private void dataGridView1_CellValidated(object sender, DataGridViewCellEventArgs e)
-        {
-            id = Convert.ToString(dataGridView1);
-            field_of_activity = Convert.ToString(dataGridView1.CurrentRow.Cells[1].Value);
-            speciality = Convert.ToString(dataGridView1.CurrentRow.Cells[2].Value);
-            company = Convert.ToString(dataGridView1.CurrentRow.Cells[3].Value);
-            requirements = Convert.ToString(dataGridView1.CurrentRow.Cells[4].Value);
-            salary = Convert.ToString(dataGridView1.CurrentRow.Cells[5].Value);
-            exp = Convert.ToString(dataGridView1.CurrentRow.Cells[6].Value);
-            schedule = Convert.ToString(dataGridView1.CurrentRow.Cells[7].Value);
-            location = Convert.ToString(dataGridView1.CurrentRow.Cells[8].Value);
-            about = Convert.ToString(dataGridView1.CurrentRow.Cells[9].Value);
-            actual = Convert.ToString(dataGridView1.CurrentRow.Cells[10].Value);
-            date = Convert.ToString(dataGridView1.CurrentRow.Cells[11].Value);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "databaseDataSet.activities". При необходимости она может быть перемещена или удалена.
-            this.activitiesTableAdapter.Fill(this.databaseDataSet.activities);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "databaseDataSet.activities". При необходимости она может быть перемещена или удалена.
-            //   this.activitiesTableAdapter.Fill(this.databaseDataSet.activities);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "databaseDataSet.clients". При необходимости она может быть перемещена или удалена.
-            this.clientsTableAdapter.Fill(this.databaseDataSet.clients);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "databaseDataSet.vacantions". При необходимости она может быть перемещена или удалена.
-            this.vacantionsTableAdapter.Fill(this.databaseDataSet.vacantions);
-
-            aboutbox aboutbox = new aboutbox();
-            aboutbox.Show();
-        }
+       
 
         private void найтиToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -179,6 +166,40 @@ namespace employment_center
         private void dataGridView1_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void genform_Enter(object sender, EventArgs e)
+        {
+            var сonnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\Database.mdf;Integrated Security=True;Connect Timeout=30";
+            SqlConnection myConnection = new SqlConnection(сonnectionString);
+            myConnection.Open();
+            DatabaseDataSet s11 = new DatabaseDataSet();
+            SqlCommand com = new SqlCommand(@"INSERT * FROM vacantions", myConnection);
+            SqlDataAdapter s = new SqlDataAdapter();
+            s.Fill(s11, "vacantions");
+            dataGridView1.DataSource = s11.Tables[0];
+            myConnection.Close();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            id = Convert.ToString(dataGridView1.CurrentRow.Cells[0].Value);
+            field_of_activity = Convert.ToString(dataGridView1.CurrentRow.Cells[1].Value);
+            speciality = Convert.ToString(dataGridView1.CurrentRow.Cells[2].Value);
+            company = Convert.ToString(dataGridView1.CurrentRow.Cells[3].Value);
+            requirements = Convert.ToString(dataGridView1.CurrentRow.Cells[4].Value);
+            salary = Convert.ToString(dataGridView1.CurrentRow.Cells[5].Value);
+            exp = Convert.ToString(dataGridView1.CurrentRow.Cells[6].Value);
+            schedule = Convert.ToString(dataGridView1.CurrentRow.Cells[7].Value);
+            location = Convert.ToString(dataGridView1.CurrentRow.Cells[8].Value);
+            about = Convert.ToString(dataGridView1.CurrentRow.Cells[9].Value);
+            actual = Convert.ToString(dataGridView1.CurrentRow.Cells[10].Value);
+            date = Convert.ToString(dataGridView1.CurrentRow.Cells[11].Value);
+
+           
+
+            aboutbox aboutbox = new aboutbox();
+            aboutbox.Show();
         }
     }
 }
