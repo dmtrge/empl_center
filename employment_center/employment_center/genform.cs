@@ -97,10 +97,21 @@ namespace employment_center
             about = Convert.ToString(dataGridView1.CurrentRow.Cells[9].Value);
             actual = Convert.ToString(dataGridView1.CurrentRow.Cells[10].Value);
            date = Convert.ToString(dataGridView1.CurrentRow.Cells[11].Value);
+
             
             aboutbox aboutbox = new aboutbox();
             aboutbox.Show();
-        }
+
+            using (var connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\Database.mdf;Integrated Security=True;Connect Timeout=30"))
+            using (var command = new SqlCommand("SELECT * FROM clients", connection))
+            using (var adapter = new SqlDataAdapter(command))
+            {
+                connection.Open();
+                var myTable = new DataTable();
+                adapter.Fill(myTable);
+                dataGridView1.DataSource = myTable;
+            }
+            }
 
         private void панельАдминистратораToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -170,16 +181,17 @@ namespace employment_center
 
         private void genform_Enter(object sender, EventArgs e)
         {
-            var сonnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\Database.mdf;Integrated Security=True;Connect Timeout=30";
-            SqlConnection myConnection = new SqlConnection(сonnectionString);
-            myConnection.Open();
-            DatabaseDataSet s11 = new DatabaseDataSet();
-            SqlCommand com = new SqlCommand(@"INSERT * FROM vacantions", myConnection);
-            SqlDataAdapter s = new SqlDataAdapter();
-            s.Fill(s11, "vacantions");
-            dataGridView1.DataSource = s11.Tables[0];
-            myConnection.Close();
-        }
+            using (var connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\Database.mdf;Integrated Security=True;Connect Timeout=30"))
+            using (var command = new SqlCommand("SELECT * FROM vacantions", connection))
+            using (var adapter = new SqlDataAdapter(command))
+            {
+                connection.Open();
+                var myTable = new DataTable();
+                adapter.Fill(myTable);
+                dataGridView1.DataSource = myTable;
+
+            }
+            }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -196,7 +208,16 @@ namespace employment_center
             actual = Convert.ToString(dataGridView1.CurrentRow.Cells[10].Value);
             date = Convert.ToString(dataGridView1.CurrentRow.Cells[11].Value);
 
-           
+             using (var connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\Database.mdf;Integrated Security=True;Connect Timeout=30"))
+            using (var command = new SqlCommand("SELECT * FROM vacantions",connection))
+            using (var adapter = new SqlDataAdapter(command))
+            {
+                connection.Open();
+                var myTable = new DataTable();
+                adapter.Fill(myTable);
+                dataGridView1.DataSource = myTable;
+
+            }
 
             aboutbox aboutbox = new aboutbox();
             aboutbox.Show();
