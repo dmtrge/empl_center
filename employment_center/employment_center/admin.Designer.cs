@@ -72,15 +72,25 @@
             this.middlenamebox = new System.Windows.Forms.TextBox();
             this.surnamebox = new System.Windows.Forms.TextBox();
             this.namebox = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.delclidbtn = new System.Windows.Forms.Button();
+            this.delcltbox = new System.Windows.Forms.TextBox();
+            this.delidtbox = new System.Windows.Forms.TextBox();
+            this.delbtn = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.HotTrack = true;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -480,6 +490,73 @@
             this.namebox.Size = new System.Drawing.Size(164, 20);
             this.namebox.TabIndex = 0;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.label20);
+            this.tabPage3.Controls.Add(this.label19);
+            this.tabPage3.Controls.Add(this.delclidbtn);
+            this.tabPage3.Controls.Add(this.delcltbox);
+            this.tabPage3.Controls.Add(this.delidtbox);
+            this.tabPage3.Controls.Add(this.delbtn);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(514, 470);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Удаление по идентификатору";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // delclidbtn
+            // 
+            this.delclidbtn.Location = new System.Drawing.Point(352, 81);
+            this.delclidbtn.Name = "delclidbtn";
+            this.delclidbtn.Size = new System.Drawing.Size(75, 23);
+            this.delclidbtn.TabIndex = 3;
+            this.delclidbtn.UseVisualStyleBackColor = true;
+            this.delclidbtn.Click += new System.EventHandler(this.delclidbtn_Click);
+            // 
+            // delcltbox
+            // 
+            this.delcltbox.Location = new System.Drawing.Point(235, 83);
+            this.delcltbox.Name = "delcltbox";
+            this.delcltbox.Size = new System.Drawing.Size(100, 20);
+            this.delcltbox.TabIndex = 2;
+            // 
+            // delidtbox
+            // 
+            this.delidtbox.Location = new System.Drawing.Point(235, 39);
+            this.delidtbox.Name = "delidtbox";
+            this.delidtbox.Size = new System.Drawing.Size(100, 20);
+            this.delidtbox.TabIndex = 1;
+            // 
+            // delbtn
+            // 
+            this.delbtn.Location = new System.Drawing.Point(352, 36);
+            this.delbtn.Name = "delbtn";
+            this.delbtn.Size = new System.Drawing.Size(75, 23);
+            this.delbtn.TabIndex = 0;
+            this.delbtn.Text = "button1";
+            this.delbtn.UseVisualStyleBackColor = true;
+            this.delbtn.Click += new System.EventHandler(this.delbtn_Click);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(3, 46);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(184, 13);
+            this.label19.TabIndex = 4;
+            this.label19.Text = "Введите идентификатор  вакансии";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(3, 86);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(174, 13);
+            this.label20.TabIndex = 5;
+            this.label20.Text = "Введите идентификатор клиента";
+            // 
             // admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -493,6 +570,8 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -543,5 +622,12 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox actualbox;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TextBox delidtbox;
+        private System.Windows.Forms.Button delbtn;
+        private System.Windows.Forms.Button delclidbtn;
+        private System.Windows.Forms.TextBox delcltbox;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
     }
 }

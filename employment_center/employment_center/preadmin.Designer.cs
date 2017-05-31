@@ -38,6 +38,7 @@
             this.passwdbox.Name = "passwdbox";
             this.passwdbox.Size = new System.Drawing.Size(117, 20);
             this.passwdbox.TabIndex = 0;
+            this.passwdbox.UseSystemPasswordChar = true;
             // 
             // enterbtn
             // 
@@ -59,6 +60,7 @@
             this.Controls.Add(this.passwdbox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "preadmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "preadmin";
             this.ResumeLayout(false);
             this.PerformLayout();

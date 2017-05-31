@@ -23,6 +23,7 @@ namespace employment_center
             {
                 admin admin = new admin();
                 admin.Show();
+                this.Hide();
             }
             else
             {

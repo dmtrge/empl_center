@@ -31,11 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.databaseDataSet = new employment_center.DatabaseDataSet();
-            this.vacantionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vacantionsTableAdapter = new employment_center.DatabaseDataSetTableAdapters.vacantionsTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fieldofactivityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.specialtyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,9 +44,10 @@
             this.aboutDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.actualDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vacantionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.databaseDataSet = new employment_center.DatabaseDataSet();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clientsTableAdapter = new employment_center.DatabaseDataSetTableAdapters.clientsTableAdapter();
             this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,14 +59,17 @@
             this.vacantionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fornotesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vacantionsTableAdapter = new employment_center.DatabaseDataSetTableAdapters.vacantionsTableAdapter();
+            this.clientsTableAdapter = new employment_center.DatabaseDataSetTableAdapters.clientsTableAdapter();
             this.specialtybox = new System.Windows.Forms.TextBox();
             this.searchbtn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vacantionsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -96,20 +96,10 @@
             this.tabPage1.Text = "Поиск по вакансиям";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1265, 580);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Поиск по клиентам";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -131,96 +121,116 @@
             this.dataGridView1.Size = new System.Drawing.Size(1259, 574);
             this.dataGridView1.TabIndex = 0;
             // 
-            // databaseDataSet
-            // 
-            this.databaseDataSet.DataSetName = "DatabaseDataSet";
-            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // vacantionsBindingSource
-            // 
-            this.vacantionsBindingSource.DataMember = "vacantions";
-            this.vacantionsBindingSource.DataSource = this.databaseDataSet;
-            // 
-            // vacantionsTableAdapter
-            // 
-            this.vacantionsTableAdapter.ClearBeforeFill = true;
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
             this.idDataGridViewTextBoxColumn.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 41;
             // 
             // fieldofactivityDataGridViewTextBoxColumn
             // 
             this.fieldofactivityDataGridViewTextBoxColumn.DataPropertyName = "field_of_activity";
             this.fieldofactivityDataGridViewTextBoxColumn.HeaderText = "field_of_activity";
             this.fieldofactivityDataGridViewTextBoxColumn.Name = "fieldofactivityDataGridViewTextBoxColumn";
+            this.fieldofactivityDataGridViewTextBoxColumn.Width = 105;
             // 
             // specialtyDataGridViewTextBoxColumn
             // 
             this.specialtyDataGridViewTextBoxColumn.DataPropertyName = "specialty";
             this.specialtyDataGridViewTextBoxColumn.HeaderText = "specialty";
             this.specialtyDataGridViewTextBoxColumn.Name = "specialtyDataGridViewTextBoxColumn";
+            this.specialtyDataGridViewTextBoxColumn.Width = 73;
             // 
             // companyDataGridViewTextBoxColumn
             // 
             this.companyDataGridViewTextBoxColumn.DataPropertyName = "company";
             this.companyDataGridViewTextBoxColumn.HeaderText = "company";
             this.companyDataGridViewTextBoxColumn.Name = "companyDataGridViewTextBoxColumn";
+            this.companyDataGridViewTextBoxColumn.Width = 75;
             // 
             // requirementsDataGridViewTextBoxColumn
             // 
             this.requirementsDataGridViewTextBoxColumn.DataPropertyName = "requirements";
             this.requirementsDataGridViewTextBoxColumn.HeaderText = "requirements";
             this.requirementsDataGridViewTextBoxColumn.Name = "requirementsDataGridViewTextBoxColumn";
+            this.requirementsDataGridViewTextBoxColumn.Width = 92;
             // 
             // salaryDataGridViewTextBoxColumn
             // 
             this.salaryDataGridViewTextBoxColumn.DataPropertyName = "salary";
             this.salaryDataGridViewTextBoxColumn.HeaderText = "salary";
             this.salaryDataGridViewTextBoxColumn.Name = "salaryDataGridViewTextBoxColumn";
+            this.salaryDataGridViewTextBoxColumn.Width = 59;
             // 
             // expDataGridViewTextBoxColumn
             // 
             this.expDataGridViewTextBoxColumn.DataPropertyName = "exp";
             this.expDataGridViewTextBoxColumn.HeaderText = "exp";
             this.expDataGridViewTextBoxColumn.Name = "expDataGridViewTextBoxColumn";
+            this.expDataGridViewTextBoxColumn.Width = 49;
             // 
             // scheduleDataGridViewTextBoxColumn
             // 
             this.scheduleDataGridViewTextBoxColumn.DataPropertyName = "schedule";
             this.scheduleDataGridViewTextBoxColumn.HeaderText = "schedule";
             this.scheduleDataGridViewTextBoxColumn.Name = "scheduleDataGridViewTextBoxColumn";
+            this.scheduleDataGridViewTextBoxColumn.Width = 75;
             // 
             // locationDataGridViewTextBoxColumn
             // 
             this.locationDataGridViewTextBoxColumn.DataPropertyName = "location";
             this.locationDataGridViewTextBoxColumn.HeaderText = "location";
             this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
+            this.locationDataGridViewTextBoxColumn.Width = 69;
             // 
             // aboutDataGridViewTextBoxColumn
             // 
             this.aboutDataGridViewTextBoxColumn.DataPropertyName = "about";
             this.aboutDataGridViewTextBoxColumn.HeaderText = "about";
             this.aboutDataGridViewTextBoxColumn.Name = "aboutDataGridViewTextBoxColumn";
+            this.aboutDataGridViewTextBoxColumn.Width = 59;
             // 
             // actualDataGridViewTextBoxColumn
             // 
             this.actualDataGridViewTextBoxColumn.DataPropertyName = "actual";
             this.actualDataGridViewTextBoxColumn.HeaderText = "actual";
             this.actualDataGridViewTextBoxColumn.Name = "actualDataGridViewTextBoxColumn";
+            this.actualDataGridViewTextBoxColumn.Width = 61;
             // 
             // dateDataGridViewTextBoxColumn
             // 
             this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
             this.dateDataGridViewTextBoxColumn.HeaderText = "date";
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.Width = 53;
+            // 
+            // vacantionsBindingSource
+            // 
+            this.vacantionsBindingSource.DataMember = "vacantions";
+            this.vacantionsBindingSource.DataSource = this.databaseDataSet;
+            // 
+            // databaseDataSet
+            // 
+            this.databaseDataSet.DataSetName = "DatabaseDataSet";
+            this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.dataGridView2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1265, 580);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Поиск по клиентам";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // dataGridView2
             // 
             this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn1,
@@ -241,81 +251,96 @@
             this.dataGridView2.Size = new System.Drawing.Size(1259, 574);
             this.dataGridView2.TabIndex = 0;
             // 
-            // clientsBindingSource
-            // 
-            this.clientsBindingSource.DataMember = "clients";
-            this.clientsBindingSource.DataSource = this.databaseDataSet;
-            // 
-            // clientsTableAdapter
-            // 
-            this.clientsTableAdapter.ClearBeforeFill = true;
-            // 
             // idDataGridViewTextBoxColumn1
             // 
             this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
             this.idDataGridViewTextBoxColumn1.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
             this.idDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn1.Width = 41;
             // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 58;
             // 
             // surnameDataGridViewTextBoxColumn
             // 
             this.surnameDataGridViewTextBoxColumn.DataPropertyName = "surname";
             this.surnameDataGridViewTextBoxColumn.HeaderText = "surname";
             this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
+            this.surnameDataGridViewTextBoxColumn.Width = 72;
             // 
             // middlenameDataGridViewTextBoxColumn
             // 
             this.middlenameDataGridViewTextBoxColumn.DataPropertyName = "middlename";
             this.middlenameDataGridViewTextBoxColumn.HeaderText = "middlename";
             this.middlenameDataGridViewTextBoxColumn.Name = "middlenameDataGridViewTextBoxColumn";
+            this.middlenameDataGridViewTextBoxColumn.Width = 88;
             // 
             // phoneDataGridViewTextBoxColumn
             // 
             this.phoneDataGridViewTextBoxColumn.DataPropertyName = "phone";
             this.phoneDataGridViewTextBoxColumn.HeaderText = "phone";
             this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            this.phoneDataGridViewTextBoxColumn.Width = 62;
             // 
             // iDpasDataGridViewTextBoxColumn
             // 
             this.iDpasDataGridViewTextBoxColumn.DataPropertyName = "IDpas";
             this.iDpasDataGridViewTextBoxColumn.HeaderText = "IDpas";
             this.iDpasDataGridViewTextBoxColumn.Name = "iDpasDataGridViewTextBoxColumn";
+            this.iDpasDataGridViewTextBoxColumn.Width = 60;
             // 
             // addressDataGridViewTextBoxColumn
             // 
             this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
             this.addressDataGridViewTextBoxColumn.HeaderText = "address";
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.Width = 69;
             // 
             // educationDataGridViewTextBoxColumn
             // 
             this.educationDataGridViewTextBoxColumn.DataPropertyName = "education";
             this.educationDataGridViewTextBoxColumn.HeaderText = "education";
             this.educationDataGridViewTextBoxColumn.Name = "educationDataGridViewTextBoxColumn";
+            this.educationDataGridViewTextBoxColumn.Width = 79;
             // 
             // vacantionDataGridViewTextBoxColumn
             // 
             this.vacantionDataGridViewTextBoxColumn.DataPropertyName = "vacantion";
             this.vacantionDataGridViewTextBoxColumn.HeaderText = "vacantion";
             this.vacantionDataGridViewTextBoxColumn.Name = "vacantionDataGridViewTextBoxColumn";
+            this.vacantionDataGridViewTextBoxColumn.Width = 79;
             // 
             // fornotesDataGridViewTextBoxColumn
             // 
             this.fornotesDataGridViewTextBoxColumn.DataPropertyName = "fornotes";
             this.fornotesDataGridViewTextBoxColumn.HeaderText = "fornotes";
             this.fornotesDataGridViewTextBoxColumn.Name = "fornotesDataGridViewTextBoxColumn";
+            this.fornotesDataGridViewTextBoxColumn.Width = 70;
             // 
             // dateDataGridViewTextBoxColumn1
             // 
             this.dateDataGridViewTextBoxColumn1.DataPropertyName = "date";
             this.dateDataGridViewTextBoxColumn1.HeaderText = "date";
             this.dateDataGridViewTextBoxColumn1.Name = "dateDataGridViewTextBoxColumn1";
+            this.dateDataGridViewTextBoxColumn1.Width = 53;
+            // 
+            // clientsBindingSource
+            // 
+            this.clientsBindingSource.DataMember = "clients";
+            this.clientsBindingSource.DataSource = this.databaseDataSet;
+            // 
+            // vacantionsTableAdapter
+            // 
+            this.vacantionsTableAdapter.ClearBeforeFill = true;
+            // 
+            // clientsTableAdapter
+            // 
+            this.clientsTableAdapter.ClearBeforeFill = true;
             // 
             // specialtybox
             // 
@@ -326,11 +351,11 @@
             // 
             // searchbtn
             // 
-            this.searchbtn.Location = new System.Drawing.Point(178, 5);
+            this.searchbtn.Location = new System.Drawing.Point(1022, 12);
             this.searchbtn.Name = "searchbtn";
             this.searchbtn.Size = new System.Drawing.Size(75, 23);
             this.searchbtn.TabIndex = 2;
-            this.searchbtn.Text = "button1";
+            this.searchbtn.Text = "Найти";
             this.searchbtn.UseVisualStyleBackColor = true;
             this.searchbtn.Click += new System.EventHandler(this.searchbtn_Click);
             // 
@@ -347,10 +372,10 @@
             this.Load += new System.EventHandler(this.searchform_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vacantionsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
             this.ResumeLayout(false);

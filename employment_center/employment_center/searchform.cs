@@ -31,9 +31,27 @@ namespace employment_center
 
        
 
-        private void searchbtn_Click(object sender, EventArgs e)
+       private void searchbtn_Click(object sender, EventArgs e)
         {
+            string sql = "SELECT * FROM vacantions WHERE specialty,about, requirements LIKE '%"+specialtybox.Text+"%';";
+            using (var connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\Database.mdf;Integrated Security=True;Connect Timeout=30"))
+            using (var command = new SqlCommand(sql, connection))
+            using (var adapter = new SqlDataAdapter(command))
+            {
+                connection.Open();
+                var myTable = new DataTable();
+                adapter.Fill(myTable);
+                dataGridView1.DataSource = myTable;
+                connection.Close();
+            }
 
+          /*  {
+                connection.Open();
+                var myTable = new DataTable();
+                adapter.Fill(myTable);
+                dataGridView2.DataSource = myTable;
+                connection.Close();
+            } */
         }
 
         private void tabControl1_Click(object sender, EventArgs e)
