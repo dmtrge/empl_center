@@ -133,7 +133,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(615, 558);
+            this.tabPage1.Size = new System.Drawing.Size(557, 430);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Добавление вакансии";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -333,7 +333,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(615, 558);
+            this.tabPage2.Size = new System.Drawing.Size(557, 430);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Добавление клиента";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -352,9 +352,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(3, 195);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(113, 13);
+            this.label10.Size = new System.Drawing.Size(115, 13);
             this.label10.TabIndex = 27;
-            this.label10.Text = "Желаемая вакансия";
+            this.label10.Text = "Выбранная вакансия";
             // 
             // label11
             // 
@@ -511,9 +511,9 @@
             this.tabPage4.Controls.Add(this.button1);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(615, 558);
+            this.tabPage4.Size = new System.Drawing.Size(557, 430);
             this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Составленые договоры";
+            this.tabPage4.Text = "Заключенный договор";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // label22

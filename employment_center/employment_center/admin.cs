@@ -109,7 +109,7 @@ namespace employment_center
             using (var myConnection = new SqlConnection(сonnectionString))
             {
                 myConnection.Open();
-                var sqlCommand = new SqlCommand("INSERT INTO activities (idclient, idvacantion, acceptedIDvac,date) VALUES(@idclient, @idvacantion,@acceptedIDvac, @date)", myConnection);
+                var sqlCommand = new SqlCommand("INSERT INTO activities (idclient, acceptedIDvac,date) VALUES(@idclient,@acceptedIDvac, @date)", myConnection);
                 sqlCommand.Parameters.Add(new SqlParameter("@idclient", idclientbox.Text));
                 sqlCommand.Parameters.Add(new SqlParameter("@acceptedIDvac", idvacantionbox.Text));
                 sqlCommand.Parameters.Add(new SqlParameter("@date", dateTimePicker1.Value));
