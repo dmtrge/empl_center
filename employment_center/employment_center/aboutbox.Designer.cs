@@ -47,108 +47,108 @@
             this.id.AutoSize = true;
             this.id.Location = new System.Drawing.Point(12, 9);
             this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(35, 13);
+            this.id.Size = new System.Drawing.Size(65, 13);
             this.id.TabIndex = 0;
-            this.id.Text = "label1";
+            this.id.Text = "Не указано";
             // 
             // field_of_activity
             // 
             this.field_of_activity.AutoSize = true;
             this.field_of_activity.Location = new System.Drawing.Point(12, 31);
             this.field_of_activity.Name = "field_of_activity";
-            this.field_of_activity.Size = new System.Drawing.Size(35, 13);
+            this.field_of_activity.Size = new System.Drawing.Size(65, 13);
             this.field_of_activity.TabIndex = 1;
-            this.field_of_activity.Text = "label1";
+            this.field_of_activity.Text = "Не указано";
             // 
             // specialty
             // 
             this.specialty.AutoSize = true;
             this.specialty.Location = new System.Drawing.Point(12, 55);
             this.specialty.Name = "specialty";
-            this.specialty.Size = new System.Drawing.Size(35, 13);
+            this.specialty.Size = new System.Drawing.Size(65, 13);
             this.specialty.TabIndex = 2;
-            this.specialty.Text = "label1";
+            this.specialty.Text = "Не указано";
             // 
             // requirements
             // 
             this.requirements.AutoSize = true;
             this.requirements.Location = new System.Drawing.Point(12, 100);
             this.requirements.Name = "requirements";
-            this.requirements.Size = new System.Drawing.Size(35, 13);
+            this.requirements.Size = new System.Drawing.Size(65, 13);
             this.requirements.TabIndex = 3;
-            this.requirements.Text = "label1";
+            this.requirements.Text = "Не указано";
             // 
             // salary
             // 
             this.salary.AutoSize = true;
             this.salary.Location = new System.Drawing.Point(12, 123);
             this.salary.Name = "salary";
-            this.salary.Size = new System.Drawing.Size(35, 13);
+            this.salary.Size = new System.Drawing.Size(65, 13);
             this.salary.TabIndex = 4;
-            this.salary.Text = "label1";
+            this.salary.Text = "Не указано";
             // 
             // exp
             // 
             this.exp.AutoSize = true;
             this.exp.Location = new System.Drawing.Point(12, 147);
             this.exp.Name = "exp";
-            this.exp.Size = new System.Drawing.Size(35, 13);
+            this.exp.Size = new System.Drawing.Size(65, 13);
             this.exp.TabIndex = 5;
-            this.exp.Text = "label1";
+            this.exp.Text = "Не указано";
             // 
             // schedule
             // 
             this.schedule.AutoSize = true;
             this.schedule.Location = new System.Drawing.Point(12, 170);
             this.schedule.Name = "schedule";
-            this.schedule.Size = new System.Drawing.Size(35, 13);
+            this.schedule.Size = new System.Drawing.Size(65, 13);
             this.schedule.TabIndex = 6;
-            this.schedule.Text = "label1";
+            this.schedule.Text = "Не указано";
             // 
             // location
             // 
             this.location.AutoSize = true;
             this.location.Location = new System.Drawing.Point(12, 193);
             this.location.Name = "location";
-            this.location.Size = new System.Drawing.Size(35, 13);
+            this.location.Size = new System.Drawing.Size(65, 13);
             this.location.TabIndex = 7;
-            this.location.Text = "label1";
+            this.location.Text = "Не указано";
             // 
             // about
             // 
             this.about.AutoSize = true;
             this.about.Location = new System.Drawing.Point(12, 216);
             this.about.Name = "about";
-            this.about.Size = new System.Drawing.Size(35, 13);
+            this.about.Size = new System.Drawing.Size(65, 13);
             this.about.TabIndex = 8;
-            this.about.Text = "label1";
+            this.about.Text = "Не указано";
             // 
             // actual
             // 
             this.actual.AutoSize = true;
             this.actual.Location = new System.Drawing.Point(12, 239);
             this.actual.Name = "actual";
-            this.actual.Size = new System.Drawing.Size(35, 13);
+            this.actual.Size = new System.Drawing.Size(65, 13);
             this.actual.TabIndex = 9;
-            this.actual.Text = "label1";
+            this.actual.Text = "Не указано";
             // 
             // date
             // 
             this.date.AutoSize = true;
             this.date.Location = new System.Drawing.Point(12, 261);
             this.date.Name = "date";
-            this.date.Size = new System.Drawing.Size(35, 13);
+            this.date.Size = new System.Drawing.Size(65, 13);
             this.date.TabIndex = 10;
-            this.date.Text = "label1";
+            this.date.Text = "Не указано";
             // 
             // company
             // 
             this.company.AutoSize = true;
             this.company.Location = new System.Drawing.Point(12, 77);
             this.company.Name = "company";
-            this.company.Size = new System.Drawing.Size(35, 13);
+            this.company.Size = new System.Drawing.Size(65, 13);
             this.company.TabIndex = 11;
-            this.company.Text = "label1";
+            this.company.Text = "Не указано";
             // 
             // aboutbox
             // 

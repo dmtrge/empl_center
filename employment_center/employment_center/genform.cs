@@ -109,7 +109,7 @@ namespace employment_center
                 connection.Open();
                 var myTable = new DataTable();
                 adapter.Fill(myTable);
-                dataGridView1.DataSource = myTable;
+                dataGridView2.DataSource = myTable;
             }
             }
 
@@ -151,7 +151,7 @@ namespace employment_center
         {
             try
             {
-                this.vacantionsTableAdapter.FillBy(this.databaseDataSet.vacantions);
+                this.vacantionsTableAdapter.Fill(this.databaseDataSet.vacantions);
             }
             catch (System.Exception ex)
             {

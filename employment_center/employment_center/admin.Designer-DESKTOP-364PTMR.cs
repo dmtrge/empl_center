@@ -104,7 +104,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(565, 456);
+            this.tabControl1.Size = new System.Drawing.Size(623, 584);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -229,7 +229,7 @@
             // 
             // editvacantionbtn
             // 
-            this.editvacantionbtn.Location = new System.Drawing.Point(196, 365);
+            this.editvacantionbtn.Location = new System.Drawing.Point(196, 372);
             this.editvacantionbtn.Name = "editvacantionbtn";
             this.editvacantionbtn.Size = new System.Drawing.Size(140, 23);
             this.editvacantionbtn.TabIndex = 10;
@@ -352,9 +352,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(3, 195);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(113, 13);
+            this.label10.Size = new System.Drawing.Size(115, 13);
             this.label10.TabIndex = 27;
-            this.label10.Text = "Желаемая вакансия";
+            this.label10.Text = "Выбранная вакансия";
             // 
             // label11
             // 
@@ -564,7 +564,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(294, 324);
+            this.button1.Location = new System.Drawing.Point(320, 181);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -583,7 +583,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(557, 430);
+            this.tabPage3.Size = new System.Drawing.Size(615, 558);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Удаление по идентификатору";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -644,8 +644,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(566, 454);
+            this.ClientSize = new System.Drawing.Size(619, 578);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "admin";
             this.Text = "Панель адимнистратора";
             this.tabControl1.ResumeLayout(false);

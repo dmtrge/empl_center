@@ -24,7 +24,7 @@ namespace employment_center
             using (var myConnection = new SqlConnection(сonnectionString))
             {
                 myConnection.Open();
-                var sqlCommand = new SqlCommand("INSERT INTO vacantions (field_of_activity, specialty, company, requirements,salary, exp, schedule, location,date, actual ) VALUES(@field_of_activity, @specialty, @company, @requirements, @salary, @exp, @schedule,@about, @date, @actual)", myConnection);
+                var sqlCommand = new SqlCommand("INSERT INTO vacantions (field_of_activity, specialty, company, requirements,salary, exp, schedule, location,about, actual,date ) VALUES(@field_of_activity, @specialty, @company, @requirements, @salary, @exp, @schedule,@location,@about, @actual, @date )", myConnection);
                 sqlCommand.Parameters.Add(new SqlParameter("@field_of_activity", field_of_activitybox.Text));
                 sqlCommand.Parameters.Add(new SqlParameter("@specialty",specialtybox.Text));
                 sqlCommand.Parameters.Add(new SqlParameter("@company", companybox.Text));
@@ -101,6 +101,20 @@ namespace employment_center
             SqlDataReader reader = com.ExecuteReader();
             reader.Close();
             MessageBox.Show("Запись успешно удалена");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var сonnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\Database.mdf;Integrated Security=True;Connect Timeout=30";
+            using (var myConnection = new SqlConnection(сonnectionString))
+            {
+                myConnection.Open();
+                var sqlCommand = new SqlCommand("INSERT INTO activities (idclient, idvacantion, acceptedIDvac,date) VALUES(@idclient, @idvacantion,@acceptedIDvac, @date)", myConnection);
+                sqlCommand.Parameters.Add(new SqlParameter("@idclient", idclientbox.Text));
+                sqlCommand.Parameters.Add(new SqlParameter("@acceptedIDvac", idvacantionbox.Text));
+                sqlCommand.Parameters.Add(new SqlParameter("@date", dateTimePicker1.Value));
+
+            }
         }
     }
 }
