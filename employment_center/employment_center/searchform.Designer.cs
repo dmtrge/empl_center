@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.searchbtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fieldofactivityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,7 +47,10 @@
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vacantionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.databaseDataSet = new employment_center.DatabaseDataSet();
+            this.specialtybox = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.idbox = new System.Windows.Forms.TextBox();
+            this.searchidbtn = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,8 +66,6 @@
             this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vacantionsTableAdapter = new employment_center.DatabaseDataSetTableAdapters.vacantionsTableAdapter();
             this.clientsTableAdapter = new employment_center.DatabaseDataSetTableAdapters.clientsTableAdapter();
-            this.specialtybox = new System.Windows.Forms.TextBox();
-            this.searchbtn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -98,6 +100,16 @@
             this.tabPage1.Text = "Поиск по вакансиям";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // searchbtn
+            // 
+            this.searchbtn.Location = new System.Drawing.Point(464, 3);
+            this.searchbtn.Name = "searchbtn";
+            this.searchbtn.Size = new System.Drawing.Size(265, 23);
+            this.searchbtn.TabIndex = 2;
+            this.searchbtn.Text = "Найти";
+            this.searchbtn.UseVisualStyleBackColor = true;
+            this.searchbtn.Click += new System.EventHandler(this.searchbtn_Click);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
@@ -117,10 +129,12 @@
             this.actualDataGridViewTextBoxColumn,
             this.dateDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.vacantionsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 40);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 29);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1259, 570);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(1259, 581);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -135,6 +149,7 @@
             this.fieldofactivityDataGridViewTextBoxColumn.DataPropertyName = "field_of_activity";
             this.fieldofactivityDataGridViewTextBoxColumn.HeaderText = "Сфера деятельности";
             this.fieldofactivityDataGridViewTextBoxColumn.Name = "fieldofactivityDataGridViewTextBoxColumn";
+            this.fieldofactivityDataGridViewTextBoxColumn.ReadOnly = true;
             this.fieldofactivityDataGridViewTextBoxColumn.Width = 126;
             // 
             // specialtyDataGridViewTextBoxColumn
@@ -142,6 +157,7 @@
             this.specialtyDataGridViewTextBoxColumn.DataPropertyName = "specialty";
             this.specialtyDataGridViewTextBoxColumn.HeaderText = "Специальность";
             this.specialtyDataGridViewTextBoxColumn.Name = "specialtyDataGridViewTextBoxColumn";
+            this.specialtyDataGridViewTextBoxColumn.ReadOnly = true;
             this.specialtyDataGridViewTextBoxColumn.Width = 110;
             // 
             // companyDataGridViewTextBoxColumn
@@ -149,6 +165,7 @@
             this.companyDataGridViewTextBoxColumn.DataPropertyName = "company";
             this.companyDataGridViewTextBoxColumn.HeaderText = "Предприятие";
             this.companyDataGridViewTextBoxColumn.Name = "companyDataGridViewTextBoxColumn";
+            this.companyDataGridViewTextBoxColumn.ReadOnly = true;
             this.companyDataGridViewTextBoxColumn.Width = 99;
             // 
             // requirementsDataGridViewTextBoxColumn
@@ -156,6 +173,7 @@
             this.requirementsDataGridViewTextBoxColumn.DataPropertyName = "requirements";
             this.requirementsDataGridViewTextBoxColumn.HeaderText = "Требования";
             this.requirementsDataGridViewTextBoxColumn.Name = "requirementsDataGridViewTextBoxColumn";
+            this.requirementsDataGridViewTextBoxColumn.ReadOnly = true;
             this.requirementsDataGridViewTextBoxColumn.Width = 93;
             // 
             // salaryDataGridViewTextBoxColumn
@@ -163,6 +181,7 @@
             this.salaryDataGridViewTextBoxColumn.DataPropertyName = "salary";
             this.salaryDataGridViewTextBoxColumn.HeaderText = "Зарплата";
             this.salaryDataGridViewTextBoxColumn.Name = "salaryDataGridViewTextBoxColumn";
+            this.salaryDataGridViewTextBoxColumn.ReadOnly = true;
             this.salaryDataGridViewTextBoxColumn.Width = 80;
             // 
             // expDataGridViewTextBoxColumn
@@ -170,6 +189,7 @@
             this.expDataGridViewTextBoxColumn.DataPropertyName = "exp";
             this.expDataGridViewTextBoxColumn.HeaderText = "Опыт";
             this.expDataGridViewTextBoxColumn.Name = "expDataGridViewTextBoxColumn";
+            this.expDataGridViewTextBoxColumn.ReadOnly = true;
             this.expDataGridViewTextBoxColumn.Width = 59;
             // 
             // scheduleDataGridViewTextBoxColumn
@@ -177,6 +197,7 @@
             this.scheduleDataGridViewTextBoxColumn.DataPropertyName = "schedule";
             this.scheduleDataGridViewTextBoxColumn.HeaderText = "График работы";
             this.scheduleDataGridViewTextBoxColumn.Name = "scheduleDataGridViewTextBoxColumn";
+            this.scheduleDataGridViewTextBoxColumn.ReadOnly = true;
             this.scheduleDataGridViewTextBoxColumn.Width = 101;
             // 
             // locationDataGridViewTextBoxColumn
@@ -184,6 +205,7 @@
             this.locationDataGridViewTextBoxColumn.DataPropertyName = "location";
             this.locationDataGridViewTextBoxColumn.HeaderText = "Местоположение";
             this.locationDataGridViewTextBoxColumn.Name = "locationDataGridViewTextBoxColumn";
+            this.locationDataGridViewTextBoxColumn.ReadOnly = true;
             this.locationDataGridViewTextBoxColumn.Width = 120;
             // 
             // aboutDataGridViewTextBoxColumn
@@ -191,6 +213,7 @@
             this.aboutDataGridViewTextBoxColumn.DataPropertyName = "about";
             this.aboutDataGridViewTextBoxColumn.HeaderText = "Описание";
             this.aboutDataGridViewTextBoxColumn.Name = "aboutDataGridViewTextBoxColumn";
+            this.aboutDataGridViewTextBoxColumn.ReadOnly = true;
             this.aboutDataGridViewTextBoxColumn.Width = 82;
             // 
             // actualDataGridViewTextBoxColumn
@@ -198,6 +221,7 @@
             this.actualDataGridViewTextBoxColumn.DataPropertyName = "actual";
             this.actualDataGridViewTextBoxColumn.HeaderText = "Актуальность";
             this.actualDataGridViewTextBoxColumn.Name = "actualDataGridViewTextBoxColumn";
+            this.actualDataGridViewTextBoxColumn.ReadOnly = true;
             this.actualDataGridViewTextBoxColumn.Width = 102;
             // 
             // dateDataGridViewTextBoxColumn
@@ -205,6 +229,7 @@
             this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
             this.dateDataGridViewTextBoxColumn.HeaderText = "Дата создания";
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // vacantionsBindingSource
             // 
@@ -216,16 +241,42 @@
             this.databaseDataSet.DataSetName = "DatabaseDataSet";
             this.databaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // specialtybox
+            // 
+            this.specialtybox.Location = new System.Drawing.Point(3, 3);
+            this.specialtybox.Name = "specialtybox";
+            this.specialtybox.Size = new System.Drawing.Size(322, 20);
+            this.specialtybox.TabIndex = 1;
+            // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.idbox);
+            this.tabPage2.Controls.Add(this.searchidbtn);
             this.tabPage2.Controls.Add(this.dataGridView2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1265, 608);
+            this.tabPage2.Size = new System.Drawing.Size(1265, 606);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Поиск по клиентам";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // idbox
+            // 
+            this.idbox.Location = new System.Drawing.Point(8, 6);
+            this.idbox.Name = "idbox";
+            this.idbox.Size = new System.Drawing.Size(304, 20);
+            this.idbox.TabIndex = 2;
+            // 
+            // searchidbtn
+            // 
+            this.searchidbtn.Location = new System.Drawing.Point(385, 3);
+            this.searchidbtn.Name = "searchidbtn";
+            this.searchidbtn.Size = new System.Drawing.Size(128, 23);
+            this.searchidbtn.TabIndex = 1;
+            this.searchidbtn.Text = "Найти";
+            this.searchidbtn.UseVisualStyleBackColor = true;
+            this.searchidbtn.Click += new System.EventHandler(this.searchidbtn_Click);
             // 
             // dataGridView2
             // 
@@ -245,11 +296,12 @@
             this.fornotesDataGridViewTextBoxColumn,
             this.dateDataGridViewTextBoxColumn1});
             this.dataGridView2.DataSource = this.clientsBindingSource;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView2.Location = new System.Drawing.Point(3, 27);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(1259, 602);
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(1259, 578);
             this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // idDataGridViewTextBoxColumn1
             // 
@@ -264,6 +316,7 @@
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "Имя";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             this.nameDataGridViewTextBoxColumn.Width = 54;
             // 
             // surnameDataGridViewTextBoxColumn
@@ -271,6 +324,7 @@
             this.surnameDataGridViewTextBoxColumn.DataPropertyName = "surname";
             this.surnameDataGridViewTextBoxColumn.HeaderText = "Фамилия";
             this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
+            this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
             this.surnameDataGridViewTextBoxColumn.Width = 81;
             // 
             // middlenameDataGridViewTextBoxColumn
@@ -278,6 +332,7 @@
             this.middlenameDataGridViewTextBoxColumn.DataPropertyName = "middlename";
             this.middlenameDataGridViewTextBoxColumn.HeaderText = "Отчество";
             this.middlenameDataGridViewTextBoxColumn.Name = "middlenameDataGridViewTextBoxColumn";
+            this.middlenameDataGridViewTextBoxColumn.ReadOnly = true;
             this.middlenameDataGridViewTextBoxColumn.Width = 79;
             // 
             // phoneDataGridViewTextBoxColumn
@@ -285,6 +340,7 @@
             this.phoneDataGridViewTextBoxColumn.DataPropertyName = "phone";
             this.phoneDataGridViewTextBoxColumn.HeaderText = "Телефон";
             this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            this.phoneDataGridViewTextBoxColumn.ReadOnly = true;
             this.phoneDataGridViewTextBoxColumn.Width = 77;
             // 
             // iDpasDataGridViewTextBoxColumn
@@ -292,6 +348,7 @@
             this.iDpasDataGridViewTextBoxColumn.DataPropertyName = "IDpas";
             this.iDpasDataGridViewTextBoxColumn.HeaderText = "Ид-код";
             this.iDpasDataGridViewTextBoxColumn.Name = "iDpasDataGridViewTextBoxColumn";
+            this.iDpasDataGridViewTextBoxColumn.ReadOnly = true;
             this.iDpasDataGridViewTextBoxColumn.Width = 67;
             // 
             // addressDataGridViewTextBoxColumn
@@ -299,6 +356,7 @@
             this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
             this.addressDataGridViewTextBoxColumn.HeaderText = "Адрес";
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
             this.addressDataGridViewTextBoxColumn.Width = 63;
             // 
             // educationDataGridViewTextBoxColumn
@@ -306,12 +364,14 @@
             this.educationDataGridViewTextBoxColumn.DataPropertyName = "education";
             this.educationDataGridViewTextBoxColumn.HeaderText = "Образование";
             this.educationDataGridViewTextBoxColumn.Name = "educationDataGridViewTextBoxColumn";
+            this.educationDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // vacantionDataGridViewTextBoxColumn
             // 
             this.vacantionDataGridViewTextBoxColumn.DataPropertyName = "vacantion";
             this.vacantionDataGridViewTextBoxColumn.HeaderText = "№ Вакансии";
             this.vacantionDataGridViewTextBoxColumn.Name = "vacantionDataGridViewTextBoxColumn";
+            this.vacantionDataGridViewTextBoxColumn.ReadOnly = true;
             this.vacantionDataGridViewTextBoxColumn.Width = 87;
             // 
             // fornotesDataGridViewTextBoxColumn
@@ -319,6 +379,7 @@
             this.fornotesDataGridViewTextBoxColumn.DataPropertyName = "fornotes";
             this.fornotesDataGridViewTextBoxColumn.HeaderText = "Для заметок";
             this.fornotesDataGridViewTextBoxColumn.Name = "fornotesDataGridViewTextBoxColumn";
+            this.fornotesDataGridViewTextBoxColumn.ReadOnly = true;
             this.fornotesDataGridViewTextBoxColumn.Width = 91;
             // 
             // dateDataGridViewTextBoxColumn1
@@ -326,6 +387,7 @@
             this.dateDataGridViewTextBoxColumn1.DataPropertyName = "date";
             this.dateDataGridViewTextBoxColumn1.HeaderText = "Дата регистрации";
             this.dateDataGridViewTextBoxColumn1.Name = "dateDataGridViewTextBoxColumn1";
+            this.dateDataGridViewTextBoxColumn1.ReadOnly = true;
             this.dateDataGridViewTextBoxColumn1.Width = 114;
             // 
             // clientsBindingSource
@@ -341,28 +403,11 @@
             // 
             this.clientsTableAdapter.ClearBeforeFill = true;
             // 
-            // specialtybox
-            // 
-            this.specialtybox.Location = new System.Drawing.Point(3, 3);
-            this.specialtybox.Name = "specialtybox";
-            this.specialtybox.Size = new System.Drawing.Size(420, 20);
-            this.specialtybox.TabIndex = 1;
-            // 
-            // searchbtn
-            // 
-            this.searchbtn.Location = new System.Drawing.Point(464, 3);
-            this.searchbtn.Name = "searchbtn";
-            this.searchbtn.Size = new System.Drawing.Size(265, 23);
-            this.searchbtn.TabIndex = 2;
-            this.searchbtn.Text = "Найти";
-            this.searchbtn.UseVisualStyleBackColor = true;
-            this.searchbtn.Click += new System.EventHandler(this.searchbtn_Click);
-            // 
             // searchform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1285, 637);
+            this.ClientSize = new System.Drawing.Size(1268, 637);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "searchform";
@@ -376,6 +421,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.vacantionsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.databaseDataSet)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -419,5 +465,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn vacantionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fornotesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.TextBox idbox;
+        private System.Windows.Forms.Button searchidbtn;
     }
 }

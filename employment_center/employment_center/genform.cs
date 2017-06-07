@@ -58,7 +58,7 @@ namespace employment_center
             this.clientsTableAdapter.Fill(this.databaseDataSet.clients);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "databaseDataSet.vacantions". При необходимости она может быть перемещена или удалена.
             this.vacantionsTableAdapter.Fill(this.databaseDataSet.vacantions);
-            
+
         }
 
         private void dataGridView2_Click(object sender, EventArgs e)
@@ -75,10 +75,6 @@ namespace employment_center
             fornotes = Convert.ToString(dataGridView2.CurrentRow.Cells[9].Value);
             datecl = Convert.ToString(dataGridView2.CurrentRow.Cells[10].Value);
 
-            //var сonnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\Database.mdf;Integrated Security=True;Connect Timeout=30";
-            //using (var myConnection = new SqlConnection(сonnectionString))
-              
-           
             aboutcl aboutcl = new aboutcl();
             aboutcl.Show();
         }
@@ -96,9 +92,9 @@ namespace employment_center
             location = Convert.ToString(dataGridView1.CurrentRow.Cells[8].Value);
             about = Convert.ToString(dataGridView1.CurrentRow.Cells[9].Value);
             actual = Convert.ToString(dataGridView1.CurrentRow.Cells[10].Value);
-           date = Convert.ToString(dataGridView1.CurrentRow.Cells[11].Value);
+            date = Convert.ToString(dataGridView1.CurrentRow.Cells[11].Value);
 
-            
+
             aboutbox aboutbox = new aboutbox();
             aboutbox.Show();
 
@@ -111,17 +107,17 @@ namespace employment_center
                 adapter.Fill(myTable);
                 dataGridView2.DataSource = myTable;
             }
-            }
+        }
 
         private void панельАдминистратораToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            if (i==0)
+            if (i == 0)
             {
-            preadmin preadmin = new preadmin();
-            preadmin.Show();
-            i++;
-            } 
+                preadmin preadmin = new preadmin();
+                preadmin.Show();
+                i++;
+            }
             else
             {
                 admin admin = new admin();
@@ -165,7 +161,7 @@ namespace employment_center
 
         }
 
-       
+
 
         private void найтиToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -176,7 +172,7 @@ namespace employment_center
 
         private void dataGridView1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void genform_Enter(object sender, EventArgs e)
@@ -191,7 +187,7 @@ namespace employment_center
                 dataGridView1.DataSource = myTable;
 
             }
-            }
+        }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -208,8 +204,8 @@ namespace employment_center
             actual = Convert.ToString(dataGridView1.CurrentRow.Cells[10].Value);
             date = Convert.ToString(dataGridView1.CurrentRow.Cells[11].Value);
 
-             using (var connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\Database.mdf;Integrated Security=True;Connect Timeout=30"))
-            using (var command = new SqlCommand("SELECT * FROM vacantions",connection))
+            using (var connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\Database.mdf;Integrated Security=True;Connect Timeout=30"))
+            using (var command = new SqlCommand("SELECT * FROM vacantions", connection))
             using (var adapter = new SqlDataAdapter(command))
             {
                 connection.Open();
@@ -221,6 +217,19 @@ namespace employment_center
 
             aboutbox aboutbox = new aboutbox();
             aboutbox.Show();
+        }
+
+        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            using (var connection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\Database.mdf;Integrated Security=True;Connect Timeout=30"))
+            using (var command = new SqlCommand("SELECT * FROM activities", connection))
+            using (var adapter = new SqlDataAdapter(command))
+            {
+                connection.Open();
+                var myTable = new DataTable();
+                adapter.Fill(myTable);
+                dataGridView3.DataSource = myTable;
+            }
         }
     }
 }
