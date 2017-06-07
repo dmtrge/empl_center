@@ -104,22 +104,10 @@
     <Compile Include="admin.Designer.cs">
       <DependentUpon>admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="chooseform.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="chooseform.Designer.cs">
-      <DependentUpon>chooseform.cs</DependentUpon>
-    </Compile>
     <Compile Include="DatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="editform.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="editform.Designer.cs">
-      <DependentUpon>editform.cs</DependentUpon>
     </Compile>
     <Compile Include="genform.cs">
       <SubType>Form</SubType>
@@ -158,12 +146,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="admin.resx">
       <DependentUpon>admin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="chooseform.resx">
-      <DependentUpon>chooseform.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="editform.resx">
-      <DependentUpon>editform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="genform.resx">
       <DependentUpon>genform.cs</DependentUpon>
