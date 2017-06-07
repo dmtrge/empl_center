@@ -113,6 +113,16 @@ namespace employment_center
                 sqlCommand.Parameters.Add(new SqlParameter("@idclient", idclientbox.Text));
                 sqlCommand.Parameters.Add(new SqlParameter("@acceptedIDvac", idvacantionbox.Text));
                 sqlCommand.Parameters.Add(new SqlParameter("@date", dateTimePicker1.Value));
+                MessageBox.Show("Запись создана успешнно");
+                this.Close();
+                try
+                {
+                    sqlCommand.ExecuteNonQuery();
+                }
+                finally
+                {
+                    myConnection.Close();
+                }
 
             }
         }

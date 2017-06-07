@@ -76,7 +76,6 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.acceptedIbox = new System.Windows.Forms.TextBox();
             this.idvacantionbox = new System.Windows.Forms.TextBox();
             this.idclientbox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -505,7 +504,6 @@
             this.tabPage4.Controls.Add(this.label22);
             this.tabPage4.Controls.Add(this.label21);
             this.tabPage4.Controls.Add(this.dateTimePicker1);
-            this.tabPage4.Controls.Add(this.acceptedIbox);
             this.tabPage4.Controls.Add(this.idvacantionbox);
             this.tabPage4.Controls.Add(this.idclientbox);
             this.tabPage4.Controls.Add(this.button1);
@@ -536,17 +534,10 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(195, 92);
+            this.dateTimePicker1.Location = new System.Drawing.Point(195, 76);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 4;
-            // 
-            // acceptedIbox
-            // 
-            this.acceptedIbox.Location = new System.Drawing.Point(195, 66);
-            this.acceptedIbox.Name = "acceptedIbox";
-            this.acceptedIbox.Size = new System.Drawing.Size(200, 20);
-            this.acceptedIbox.TabIndex = 3;
             // 
             // idvacantionbox
             // 
@@ -715,7 +706,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TextBox acceptedIbox;
         private System.Windows.Forms.TextBox idvacantionbox;
         private System.Windows.Forms.TextBox idclientbox;
         private System.Windows.Forms.Button button1;
