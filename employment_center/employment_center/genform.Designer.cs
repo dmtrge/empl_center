@@ -115,7 +115,7 @@
             this.оПрограммеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1859, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1662, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -168,7 +168,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1345, 711);
+            this.tabPage2.Size = new System.Drawing.Size(1167, 711);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Список клиентов";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -176,7 +176,7 @@
             // dataGridView2
             // 
             this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -306,7 +306,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1353, 737);
+            this.tabControl1.Size = new System.Drawing.Size(1175, 737);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.Click += new System.EventHandler(this.genform_Load);
             // 
@@ -316,16 +316,16 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1345, 711);
+            this.tabPage1.Size = new System.Drawing.Size(1167, 711);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Список вакансий";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -343,9 +343,9 @@
             this.actualDataGridViewTextBoxColumn1,
             this.dateDataGridViewTextBoxColumn2});
             this.dataGridView1.DataSource = this.vacantionsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 3);
+            this.dataGridView1.Location = new System.Drawing.Point(-2, -4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1343, 712);
+            this.dataGridView1.Size = new System.Drawing.Size(1128, 712);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -529,6 +529,7 @@
             // 
             // dataGridView3
             // 
+            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView3.AutoGenerateColumns = false;
             this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -539,7 +540,7 @@
             this.acceptedIDvacDataGridViewTextBoxColumn,
             this.dateDataGridViewTextBoxColumn3});
             this.dataGridView3.DataSource = this.activitiesBindingSource;
-            this.dataGridView3.Location = new System.Drawing.Point(1371, 52);
+            this.dataGridView3.Location = new System.Drawing.Point(1200, 45);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridView3.Size = new System.Drawing.Size(450, 712);
@@ -606,7 +607,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.ClientSize = new System.Drawing.Size(1859, 776);
+            this.ClientSize = new System.Drawing.Size(1662, 776);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);

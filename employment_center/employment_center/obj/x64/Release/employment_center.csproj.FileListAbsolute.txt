@@ -1,0 +1,17 @@
+C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\bin\x64\Release\Database.mdf
+C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\bin\x64\Release\Database_log.ldf
+C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\bin\x64\Release\employment_center.exe.config
+C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\bin\x64\Release\employment_center.exe
+C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\bin\x64\Release\employment_center.pdb
+C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\obj\x64\Release\employment_center.aboutbox.resources
+C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\obj\x64\Release\employment_center.AboutBox1.resources
+C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\obj\x64\Release\employment_center.aboutcl.resources
+C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\obj\x64\Release\employment_center.admin.resources
+C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\obj\x64\Release\employment_center.genform.resources
+C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\obj\x64\Release\employment_center.headband.resources
+C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\obj\x64\Release\employment_center.preadmin.resources
+C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\obj\x64\Release\employment_center.Properties.Resources.resources
+C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\obj\x64\Release\employment_center.searchform.resources
+C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\obj\x64\Release\employment_center.csproj.GenerateResource.Cache
+C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\obj\x64\Release\employment_center.exe
+C:\Users\dmtrge\OneDrive\project\employment_center\employment_center\obj\x64\Release\employment_center.pdb

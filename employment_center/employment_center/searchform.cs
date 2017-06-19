@@ -133,7 +133,7 @@ namespace employment_center
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            idcl = Convert.ToString(dataGridView2.CurrentRow.Cells[0].Value);
+          /*  idcl = Convert.ToString(dataGridView2.CurrentRow.Cells[0].Value);
             name = Convert.ToString(dataGridView2.CurrentRow.Cells[1].Value);
             surname = Convert.ToString(dataGridView2.CurrentRow.Cells[2].Value);
             middlename = Convert.ToString(dataGridView2.CurrentRow.Cells[3].Value);
@@ -146,7 +146,7 @@ namespace employment_center
             datecl = Convert.ToString(dataGridView2.CurrentRow.Cells[10].Value);
 
             aboutcl aboutcl = new aboutcl();
-            aboutcl.Show();
+            aboutcl.Show(); */
         }
     }
 }
